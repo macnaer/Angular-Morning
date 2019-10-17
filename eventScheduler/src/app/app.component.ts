@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eventScheduler';
+  loadedChoice = 'events';
+
+  onChoiceSwitch(choice: string) {
+    this.loadedChoice = choice;
+  }
 }
