@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Event from "../../../models/event";
 
 @Component({
@@ -8,11 +8,13 @@ import Event from "../../../models/event";
 })
 export class EventsItemComponent implements OnInit {
   @Input() singleEvent: Event;
+  @Output() selectedEvent = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit() {
-    console.log("Works",this.singleEvent);
   }
-
+  onActiveEvent(){
+    this.selectedEvent.emit();
+  }
 }

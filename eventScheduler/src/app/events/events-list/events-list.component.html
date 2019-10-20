@@ -5,6 +5,7 @@
 </div>
 <div class="row">
     <div class="col">
-        <app-events-item *ngFor="let event of events" [singleEvent]="event"></app-events-item>
+        <app-events-item *ngFor="let event of events" [singleEvent]="event" 
+        (selectedEvent)="onEventSelected(event)"></app-events-item>
     </div>
 </div>

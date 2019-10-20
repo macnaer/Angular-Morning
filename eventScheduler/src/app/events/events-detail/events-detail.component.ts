@@ -13,6 +13,9 @@ export class EventsDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("Works", this.event);
   }
+  
+  
 
 }
