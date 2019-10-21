@@ -9,5 +9,6 @@ export class Dropdown{
 
     @HostListener('click') toggleOpen() {
         this.isOpen = !this.isOpen;
+        console.log("Works!!!!!");
     }
 }

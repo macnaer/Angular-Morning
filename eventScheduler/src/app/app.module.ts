@@ -13,6 +13,7 @@ import { SkillsEditComponent } from './skills-list/skills-edit/skills-edit.compo
 import { Dropdown } from './models/dropdown';
 
 import { EventService } from "./events/event.service";
+import { SkillsListService } from "./skills-list/skills-list.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { EventService } from "./events/event.service";
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [EventService],
+  providers: [EventService, SkillsListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
