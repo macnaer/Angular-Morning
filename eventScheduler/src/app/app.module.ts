@@ -10,6 +10,9 @@ import { EventsDetailComponent } from './events/events-detail/events-detail.comp
 import { EventsItemComponent } from './events/events-list/events-item/events-item.component';
 import { SkillsListComponent } from './skills-list/skills-list.component';
 import { SkillsEditComponent } from './skills-list/skills-edit/skills-edit.component';
+import { Dropdown } from './models/dropdown';
+
+import { EventService } from "./events/event.service";
 
 @NgModule({
   declarations: [
@@ -20,13 +23,14 @@ import { SkillsEditComponent } from './skills-list/skills-edit/skills-edit.compo
     EventsDetailComponent,
     EventsItemComponent,
     SkillsListComponent,
-    SkillsEditComponent
+    SkillsEditComponent,
+    Dropdown
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

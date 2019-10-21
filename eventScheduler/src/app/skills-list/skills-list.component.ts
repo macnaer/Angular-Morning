@@ -13,6 +13,10 @@ export class SkillsListComponent implements OnInit {
   ];
   constructor() { }
 
+  onAddSkill(skill:Skills){
+    this.SkillsArr.push(skill);
+  }
+
   ngOnInit() {
   }
 

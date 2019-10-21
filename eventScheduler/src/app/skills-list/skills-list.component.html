@@ -1,6 +1,8 @@
 <div class="row">
     <div class="col-xs 10">
-        <app-skills-edit></app-skills-edit>
+        <app-skills-edit
+         (skillsAdded)="onAddSkill($event)"
+         ></app-skills-edit>
         <hr>
         <ul class="list-group">
           <a class="list-group-item" style="cursor: pointer" *ngFor="let skills of SkillsArr">
