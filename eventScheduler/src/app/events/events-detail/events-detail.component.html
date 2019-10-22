@@ -29,6 +29,10 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Skills
+        <ul>
+            <li class="list-group-item" *ngFor="let skill of event.skills">
+                {{skill.skillName}} / {{skill.level}}
+            </li>
+        </ul>
     </div>
 </div>
