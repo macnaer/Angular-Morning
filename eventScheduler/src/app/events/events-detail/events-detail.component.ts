@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 import  Events  from '../../models/event';
-
+import Skills from 'src/app/models/skills.model';
 
 @Component({
   selector: 'app-events-detail',
@@ -9,13 +9,7 @@ import  Events  from '../../models/event';
 })
 export class EventsDetailComponent implements OnInit {
   @Input() event: Events;
-
   constructor() { }
-
   ngOnInit() {
-    console.log("Works", this.event);
   }
-  
-  
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import  Skills  from "../models/skills.model";
 import { SkillsListService} from "./skills-list.service";
 @Component({
@@ -9,7 +9,6 @@ import { SkillsListService} from "./skills-list.service";
 export class SkillsListComponent implements OnInit {
   
   SkillsArr: Skills[];
-
   constructor(private skillsService: SkillsListService) { }
 
   onAddSkill(skill:Skills){

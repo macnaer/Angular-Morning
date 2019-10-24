@@ -1,11 +1,29 @@
-<div class="row">
-    <div class="col-xs-12">
-        <button class="btn btn-success">Add new event</button>
-    </div>
-</div>
+
 <div class="row">
     <div class="col">
         <app-events-item *ngFor="let event of events" [singleEvent]="event" 
-        (selectedEvent)="onEventSelected(event)"></app-events-item>
+        (selectedEvent)="onEventSelected(event)" (eventAdded)="AddNewEvent($event)"></app-events-item>
     </div>
+</div>
+
+<div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="name">Event title</label>
+      <input type="text" id="name" class="form-control" #eventInput>
+    </div>
+    <div class="col-sm-12 form-group">
+      <label for="level">Event description</label>
+      <input type="text" id="level" class="form-control" #descInput>
+    </div>
+    <div class="col-sm-12 form-group">
+      <label for="level">Image path</label>
+      <input type="text" id="level" class="form-control" #imgInput>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="AddNewEvent()">Add new event</button>
+    </div>
+  </div>
 </div>

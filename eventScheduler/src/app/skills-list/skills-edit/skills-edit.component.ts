@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+
 import Skills from "../../models/skills.model";
+
 @Component({
   selector: 'app-skills-edit',
   templateUrl: './skills-edit.component.html',
