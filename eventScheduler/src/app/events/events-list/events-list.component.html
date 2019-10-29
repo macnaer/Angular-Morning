@@ -6,24 +6,36 @@
     </div>
 </div>
 
-<div>
+<form (ngSubmit)="AddNewEvent(eventForm)" #eventForm="ngForm">
   <div class="row">
     <div class="col-sm-12 form-group">
       <label for="name">Event title</label>
-      <input type="text" id="name" class="form-control" #eventInput>
+      <input type="text" id="name" class="form-control" 
+      name="title"
+      required
+      ngModel
+      >
     </div>
     <div class="col-sm-12 form-group">
       <label for="level">Event description</label>
-      <input type="text" id="level" class="form-control" #descInput>
+      <input type="text" id="level" class="form-control" 
+       name="description"
+       required
+       ngModel
+      >
     </div>
     <div class="col-sm-12 form-group">
       <label for="level">Image path</label>
-      <input type="text" id="level" class="form-control" #imgInput>
+      <input type="text" id="level" class="form-control" 
+       name="img"
+       required
+       ngModel
+      >
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-success" (click)="AddNewEvent()">Add new event</button>
+      <button class="btn btn-success" [disabled]="!eventForm.valid">Add new event</button>
     </div>
   </div>
-</div>
+</form>
