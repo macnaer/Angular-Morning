@@ -3,7 +3,6 @@ import Event from "../../models/event";
 import Skills from "../../models/skills.model";
 import {EventService} from "../event.service";
 
-
 @Component({
   selector: 'app-events-list',
   templateUrl: './events-list.component.html',
@@ -38,5 +37,4 @@ export class EventsListComponent implements OnInit {
   onEventSelected(event: Event){
     this.getSelectedEvent.emit(event);
   }
-
 }
