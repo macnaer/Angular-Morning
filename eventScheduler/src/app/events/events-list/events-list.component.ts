@@ -3,6 +3,7 @@ import Event from "../../models/event";
 import Skills from "../../models/skills.model";
 import {EventService} from "../event.service";
 import { NgForm } from '@angular/forms';
+import { ApiService } from "../../services/api.service";
 
 @Component({
   selector: 'app-events-list',
@@ -35,7 +36,7 @@ export class EventsListComponent implements OnInit {
   //   this.events.push(newEvents);
   // }
  
-  constructor(private eventService: EventService ) { }
+  constructor(private eventService: EventService, private apiService: ApiService ) { }
 
   ngOnInit() {
     this.events = this.eventService.getAllEvents();

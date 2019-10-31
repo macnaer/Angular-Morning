@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventService } from "../events/event.service";
 import { Injectable } from '@angular/core';
+import  Event  from "../models/event";
 
 @Injectable({providedIn: 'root'})
 export class ApiService{
@@ -17,9 +18,10 @@ export class ApiService{
       });
   }
   loadEvents(){
-    this.http.get('https://event-7c503.firebaseio.com/events.json')
+    this.http.get<Event[]>('https://event-7c503.firebaseio.com/events.json')
       .subscribe(events => {
         console.log(events);
+        this.eventService.setEvents(events);
       })
   }
 }
