@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, Output, EventEmitter } from '@angular/core';
 import Event from "../../models/event";
 import Skills from "../../models/skills.model";
 import {EventService} from "../event.service";
@@ -39,9 +39,13 @@ export class EventsListComponent implements OnInit {
   constructor(private eventService: EventService, private apiService: ApiService ) { }
 
   ngOnInit() {
+    console.log("ngOnInit");
     this.events = this.eventService.getAllEvents();
   }
- 
+  ngDoCheck(){
+    console.log("ngDoCheck");
+    this.events = this.eventService.getAllEvents();
+  }
   onEventSelected(event: Event){
     this.getSelectedEvent.emit(event);
   }
