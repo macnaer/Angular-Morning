@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  
-  constructor() { }
-
+  constructor(private apiService: ApiService) { }
+  onSaveEvents(){
+    this.apiService.saveEvents();
+  }
+  onLoadEvents(){
+    this.apiService.loadEvents();
+  }
   ngOnInit() {
   }
 
